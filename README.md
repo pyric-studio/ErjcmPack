@@ -14,4 +14,4 @@
 
 [https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset](https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset)
 
-### 大部分代码由DeepSeek提供。
+### 部分代码由DeepSeek提供。
