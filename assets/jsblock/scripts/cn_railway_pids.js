@@ -1,5 +1,5 @@
 // ===== 全局配置 =====
-var ROW_HEIGHT = 30;                // 每行高度（像素），用于垂直定位
+var ROW_HEIGHT = 20;                // 每行高度（像素），用于垂直定位
 var WAIT_THRESHOLD = 300000;         // 欢迎语阈值：5分钟（300000毫秒）
 var WELCOME_MESSAGES = [             // 你指定的欢迎语列表
     "{车站名}站欢迎您",
@@ -102,7 +102,7 @@ function render(ctx, state, pids) {
                 .text(firstLineText)
                 .color(0x00FF00)
                 .centerAlign()
-                .pos(screenWidth / 2, 0)
+                .pos(screenWidth / 2, 1)
                 .scale(1.5)
                 .draw(ctx);
         } else {
@@ -116,9 +116,9 @@ function render(ctx, state, pids) {
         
         // --- 第二行 ---
         if (hasTrain) {
-            var origin = getOriginStation(firstArrival);
-            var dest = firstArrival.destination() || "未知";
-            var secondLineText = origin + " 开往 " + dest;
+            var origin = getOriginStation(firstArrival).split('|')[0];
+            var dest = firstArrival.destination().split('|')[0] || "未知";
+            var secondLineText = origin + " - " + dest;
             
             Text.create("Second line")
                 .text(secondLineText)
