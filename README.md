@@ -1,6 +1,8 @@
 <div align="center">
 
-<h1>JCM-PIDS</h1>
+<img src="./pack.png" alt="ErjcmPack追加包图标">
+
+<h1>ErjcmPack</h1>
 
 一个Joban Client Mod追加包
 
