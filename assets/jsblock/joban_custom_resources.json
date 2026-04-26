@@ -4,6 +4,11 @@
       "id": "cr_platform_pids",
       "name": "国铁站台PIDS",
       "scriptFiles": ["jsblock:scripts/cr/cr_platform_pids.js"]
+    },
+    {
+      "id": "njmetro_line2_pids",
+      "name": "南京地铁二号线PIDS",
+      "scriptFiles": ["jsblock:scripts/njmetro/njmetro_line2_pids.js"]
     }
   ]
 }
