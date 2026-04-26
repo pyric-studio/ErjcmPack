@@ -10,7 +10,8 @@ IGNORE_LIST = [
     ".github/",       # 按需添加，例如忽略工作流目录
     "pack_release.py",# 一般会自动排除脚本自身，但也可写在这里
     ".gitattributes",
-    ".gitignore"
+    ".gitignore",
+    ".git/"
 ]
 
 def should_ignore(rel_path: str) -> bool:
