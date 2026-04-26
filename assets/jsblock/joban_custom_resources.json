@@ -1,9 +1,9 @@
 {
   "pids_images": [
     {
-      "id": "cn_platform_pids",
+      "id": "cr_platform_pids",
       "name": "国铁站台PIDS",
-      "scriptFiles": ["jsblock:scripts/cn_railway_pids.js"]
+      "scriptFiles": ["jsblock:scripts/cr/cr_platform_pids.js"]
     }
   ]
 }
