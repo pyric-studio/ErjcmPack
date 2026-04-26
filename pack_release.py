@@ -9,7 +9,8 @@ IGNORE_LIST = [
     "res/",             # 忽略整个 res 文件夹及其内容
     ".github/",       # 按需添加，例如忽略工作流目录
     "pack_release.py",# 一般会自动排除脚本自身，但也可写在这里
-    ".gitattributes"
+    ".gitattributes",
+    ".gitignore"
 ]
 
 def should_ignore(rel_path: str) -> bool:
