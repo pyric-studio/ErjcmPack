@@ -1,4 +1,14 @@
-# JCM-PIDS：EricDing618自制Joban Client Mod的PIDS
+<div align="center">
+
+<img src="./pack.png" alt="ErjcmPack追加包图标">
+
+<h1>ErjcmPack</h1>
+
+一个Joban Client Mod追加包
+
+</div>
+
+
 ## 已知可用版本：
 - - Minecraft 1.20.4
   - Fabric 0.16.14
@@ -14,4 +24,4 @@
 
 [https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset](https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset)
 
-### 部分代码由DeepSeek提供。
+### 使用了~~亿点~~点DeepSeek

@@ -1,0 +1,28 @@
+name: 发行版自动打包源码
+
+on:
+  release:
+    types: [published]          # 当发行版正式发布时触发
+
+jobs:
+  pack-and-upload:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write           # 允许上传资产到发行版
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 运行打包脚本
+        run: python pack_release.py
+
+      - name: 上传 ErjcmPack.zip 到发行版
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ErjcmPack.zip
+          tag_name: ${{ github.event.release.tag_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
