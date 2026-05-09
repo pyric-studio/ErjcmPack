@@ -1,6 +1,6 @@
 // ===== 全局配置 =====
 var ROW_HEIGHT = 23;                // 每行高度（像素，用于第二、三行）
-var WAIT_THRESHOLD = 300000;        // 欢迎语阈值：5分钟（毫秒）
+var WAIT_THRESHOLD = 60000;        // 欢迎语阈值（毫秒）
 var HORIZONTAL_MARGIN = 15;         // 第一行左右边距（像素），可调
 var WELCOME_MESSAGES = [            // 欢迎语列表，支持用 ; 分隔多行（每行会居中显示）
     "{车站名}欢迎您",

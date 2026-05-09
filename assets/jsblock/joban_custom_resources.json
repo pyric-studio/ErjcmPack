@@ -9,11 +9,6 @@
       "id": "njmetro_line2_pids",
       "name": "南京地铁二号线PIDS",
       "scriptFiles": ["jsblock:scripts/njmetro/njmetro_line2_pids.js"]
-    },
-    {
-      "id": "station_summary_pids",
-      "name": "国铁车站大屏",
-      "scripts": ["jsblock:scripts/cr/station_summary_pids.js"]
     }
   ]
 }
