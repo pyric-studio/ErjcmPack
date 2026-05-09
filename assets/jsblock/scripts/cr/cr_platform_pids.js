@@ -1,6 +1,6 @@
 // ===== 全局配置 =====
 var ROW_HEIGHT = 23;                // 每行高度（像素，用于第二、三行）
-var WAIT_THRESHOLD = 60000;        // 欢迎语阈值（毫秒）
+var WAIT_THRESHOLD = 120000;        // 欢迎语阈值（毫秒）
 var HORIZONTAL_MARGIN = 15;         // 第一行左右边距（像素），可调
 var WELCOME_MESSAGES = [            // 欢迎语列表，支持用 ; 分隔多行（每行会居中显示）
     "{车站名}欢迎您",
@@ -137,6 +137,14 @@ function render(ctx, state, pids) {
     var shouldShowWelcome = (!hasTrain) || (hasTrain && waitTime > WAIT_THRESHOLD);
 
     if (shouldShowWelcome) {
+        // ===== 每18秒随机切换欢迎语 =====
+        var now = Date.now();
+        if (!state.lastWelcomeChange || (now - state.lastWelcomeChange >= 18000)) {
+            // 重新获取站名（用于替换模板中的 {车站名}）
+            var stationNameForWelcome = stationObj ? stationObj.getName() : "本站";
+            state.welcomeLines = getRandomWelcome(stationNameForWelcome);
+            state.lastWelcomeChange = now;
+        }
         // 显示多行红色欢迎语（整体居中）
         var welcomeLines = state.welcomeLines;
         if (welcomeLines && welcomeLines.length > 0) {
@@ -260,6 +268,7 @@ function create(ctx, state, pids) {
     print("国铁站台PIDS已创建");
     var station = pids.station();
     var stationName = station ? station.getName() : "本站";
+    state.lastWelcomeChange = Date.now();
     // 随机选择欢迎语并存储为多行数组
     state.welcomeLines = getRandomWelcome(stationName);
     print("生成的欢迎语行数: " + state.welcomeLines.length);
