@@ -8,7 +8,9 @@
 
 </div>
 
-
+## 核心功能
+- [x] 中国铁路站台显示屏1`assets\jsblock\scripts\cr\cr_platform_pids_1.js`
+- [ ] 待完成任务
 ## 已知可用版本：
 - - Minecraft 1.20.4
   - Fabric 0.16.14
