@@ -1,19 +1,14 @@
 {
   "pids_images": [
     {
-      "id": "cr_platform_pids",
-      "name": "国铁站台PIDS",
-      "scriptFiles": ["jsblock:scripts/cr/cr_platform_pids.js"]
+      "id": "cr_platform_pids_1",
+      "name": "国铁站台显示屏1",
+      "scriptFiles": ["jsblock:scripts/cr/cr_platform_pids_1.js"]
     },
     {
-      "id": "njmetro_line2_pids",
-      "name": "南京地铁二号线PIDS",
-      "scriptFiles": ["jsblock:scripts/njmetro/njmetro_line2_pids.js"]
-    },
-    {
-      "id": "station_summary_pids",
-      "name": "国铁车站大屏",
-      "scripts": ["jsblock:scripts/cr/station_summary.js"]
+      "id": "njmetro_pids_1",
+      "name": "南京地铁站台显示屏1",
+      "scriptFiles": ["jsblock:scripts/njmetro/njmetro_pids_1.js"]
     }
   ]
 }
