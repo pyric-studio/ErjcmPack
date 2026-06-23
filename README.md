@@ -13,9 +13,9 @@
 > 请确保您的`Joban Client Mod（JCM）`模组支持使用`JavaScript`修改其内置的`PIDS`
 1. 您可以直接从 `Releases` 中下载`ErjcmPack.zip`作为资源包
 2. 将`ErjcmPack.zip`放入`resourcepacks`文件夹中，并通过`Minecraft`游戏导入资源包
-> [!NOTE]
-> 若遇到某个`Release`没有`ErjcmPack.zip`，这时候可以直接点击`Source code (zip)`下载压缩包，提取出其中的文件夹并移动至`resourcepacks`文件夹中
-1. 使用`MTR`的`刷`右键`JCM`的`PIDS`，这通常会跳出一个界面。点击 **“选择格式”栏目** 右侧的 **“选择”按钮** ，跳转到 **“显示屏格式”** 界面，并在 **“自订显示屏格式”** 中选择需要的格式。建议对照 [核心功能](#核心功能) 选择。
+   > [!NOTE]
+   > 若遇到某个`Release`没有`ErjcmPack.zip`，这时候可以直接点击`Source code (zip)`下载压缩包，提取出其中的文件夹并移动至`resourcepacks`文件夹中
+3. 使用`MTR`的`刷`右键`JCM`的`PIDS`，这通常会跳出一个界面。点击 **“选择格式”栏目** 右侧的 **“选择”按钮** ，跳转到 **“显示屏格式”** 界面，并在 **“自订显示屏格式”** 中选择需要的格式。建议对照 [核心功能](#核心功能) 选择。
 
 ## 核心功能
 > [!NOTE]
