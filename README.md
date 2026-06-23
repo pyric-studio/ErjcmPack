@@ -4,7 +4,7 @@
 
 <h1>ErjcmPack</h1>
 
-一个Joban Client Mod追加包
+一个Joban Client Mod资源包
 
 </div>
 
@@ -49,4 +49,4 @@
 
 [https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset](https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset)
 
-### 使用了~~亿点~~点DeepSeek
+### 使用了~~亿点点~~DeepSeek
