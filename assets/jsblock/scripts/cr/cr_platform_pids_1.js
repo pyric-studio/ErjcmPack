@@ -1,22 +1,26 @@
 // ===== 全局配置 =====
 var ROW_HEIGHT = 23;                // 每行高度（像素，用于第二、三行）
-var WAIT_THRESHOLD = 120000;        // 欢迎语阈值（毫秒）
-var HORIZONTAL_MARGIN = 15;         // 第一行左右边距（像素），可调
-var WELCOME_MESSAGES = [            // 欢迎语列表，支持用 ; 分隔多行
+var WAIT_THRESHOLD = 120000;        // 列车到达WAIT_THRESHOLD毫秒前保持显示欢迎语
+var HORIZONTAL_MARGIN = 15;         // 第一行左右边距（像素）
+var WELCOME_MESSAGES = [            // 欢迎语列表，支持用半角分号“;”分隔多行
     "{车站名}欢迎您",
     "祝您旅途愉快",
     "安全出行 温馨相伴",
+    "温馨旅途 文明相伴",
     "诚信友善 文明出行",
+    "旅途漫漫;文明相伴",
     "不忘初心 牢记使命;交通强国 铁路先行",
     "站台严禁;竖立高举杆状物品;骑行平衡车、滑板等",
     "擅自跳入股道危险且违法;将追究法律责任",
     "站台禁止吸烟;严禁将烟蒂扔入股道",
-    "旅途漫漫;文明相伴"
+    "讲文明 树新风;有序乘车 文明出行",
+    "站台边缘危险;请勿越过安全白线;请搀好儿童 拿好行李箱",
+    "自信自强 守正创新;踔厉奋发 勇毅前行"
 ];
 var MAX_STATIC_CHARS = 16;          // 第三行静态显示时允许的最大字符数（不勾选“隐藏到站资料”时生效）
 
 // ===== 第二行控制参数 =====
-var STATION_SPACING = 25;           // 始发站/终点站与“开往”之间的固定像素距离
+var STATION_SPACING = 2;           // 始发站/终点站与“开往”之间的固定像素距离
 var MAX_STATION_CHARS = 5;          // 站名字符数超过此值时启用走马灯
 var KAWANG_OFFSET = 20;             // “开往”文本半宽度的固定估计值（像素），根据字体大小调整
 
@@ -224,7 +228,7 @@ function render(ctx, state, pids) {
 
             // ---- 绘制始发站 ----
             if (origin.length <= MAX_STATION_CHARS) {
-                // 静态右对齐
+                // 静态短文本：保持 2px 间距
                 Text.create("Second origin")
                     .text(origin)
                     .color(0xFFFF00)
@@ -233,21 +237,22 @@ function render(ctx, state, pids) {
                     .scale(scaleSecond)
                     .draw(ctx);
             } else {
-                // 走马灯：区域为 [HORIZONTAL_MARGIN, originBoundary]
+                // 走马灯长文本：使用较大的间距（例如 20px）
+                var MARQUEE_SPACING = 20;           // 可根据视觉调整
+                var marqueeRightBound = kaiwangLeft - MARQUEE_SPACING;
                 var leftBound = HORIZONTAL_MARGIN;
-                var areaWidth = originBoundary - leftBound;
-                if (areaWidth < 20) areaWidth = 20; // 防止区域过小
+                var areaWidth = marqueeRightBound - leftBound;
+                if (areaWidth < 20) areaWidth = 20;
                 Text.create("Second origin marquee")
                     .text(origin)
                     .color(0xFFFF00)
-                    .leftAlign()               // 文本从区域左边界开始
+                    .leftAlign()
                     .pos(leftBound, yPos)
                     .size(areaWidth, ROW_HEIGHT)
                     .scale(scaleSecond)
-                    .marquee()                 // 默认从右向左循环
+                    .marquee()
                     .draw(ctx);
-            }
-
+}
             // ---- 绘制终点站 ----
             if (dest.length <= MAX_STATION_CHARS) {
                 // 静态左对齐
@@ -260,7 +265,7 @@ function render(ctx, state, pids) {
                     .draw(ctx);
             } else {
                 // 走马灯：区域为 [destBoundary, screenWidth - HORIZONTAL_MARGIN]
-                var rightBound = screenWidth - HORIZONTAL_MARGIN;
+                var rightBound = screenWidth - HORIZONTAL_MARGIN*2;
                 var areaWidth = rightBound - destBoundary;
                 if (areaWidth < 20) areaWidth = 20;
                 Text.create("Second dest marquee")
@@ -294,11 +299,11 @@ function render(ctx, state, pids) {
                 thirdLineContent = processCustomMessage(customMsg, pids);
                 // 如果替换后意外为空，也 fallback
                 if (!thirdLineContent || thirdLineContent.trim() === "") {
-                    thirdLineContent = "欢迎使用本线路";
+                    thirdLineContent = "请您看管好携带的儿童，请勿在站台边、车门处停留、玩耍，避免发生危险";
                 }
             } else {
                 // 没有自定义消息，直接使用 fallback
-                thirdLineContent = "欢迎使用本线路";
+                thirdLineContent = "请您看管好携带的儿童，请勿在站台边、车门处停留、玩耍，避免发生危险";
             }
 
             // 使用官方 API 检查第三行是否被隐藏（即勾选了“隐藏到站资料”）
