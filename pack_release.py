@@ -11,7 +11,8 @@ IGNORE_LIST = [
     "pack_release.py",# 一般会自动排除脚本自身，但也可写在这里
     ".gitattributes",
     ".gitignore",
-    ".git/"
+    ".git/",
+    "cache.json"
 ]
 
 def should_ignore(rel_path: str) -> bool:
