@@ -351,10 +351,10 @@ function create(ctx, state, pids) {
     var stationName = station ? station.getName() : "本站";
     state.lastWelcomeChange = Date.now();
     state.welcomeLines = getRandomWelcome(stationName);
-    print("生成的欢迎语行数: " + state.welcomeLines.length);
-    for (var i = 0; i < state.welcomeLines.length; i++) {
-        print("  行" + i + ": " + state.welcomeLines[i]);
-    }
+    //print("生成的欢迎语行数: " + state.welcomeLines.length);
+    //for (var i = 0; i < state.welcomeLines.length; i++) {
+        //print("  行" + i + ": " + state.welcomeLines[i]);
+    //}
 }
 
 function dispose(ctx, state, pids) {
