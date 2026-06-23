@@ -8,8 +8,8 @@
     {
       "id": "station_summary_pids",
       "name": "国铁车站大屏（投影仪）",
-      "scripts": ["jsblock:scripts/cr/station_summary_pids.js"],
-      "background": "jsblock:transparent"
+      "scriptFiles": ["jsblock:scripts/cr/station_summary_pids.js"],
+      "background": "jsblock:texture/transparent.png"
     },
     {
       "id": "njmetro_pids_1",
