@@ -4,13 +4,18 @@
 
 <h1>ErjcmPack</h1>
 
-一个Joban Client Mod追加包
+一个Joban Client Mod资源包
 
 </div>
 
 ## 如何使用
-1. 您可以直接从 `Releases` 中下载 `Source code (zip)` 并从中提取文件夹
-2. 将提取出的文件夹放入`resourcepacks`文件夹中
+> [!WARNING]
+> 请确保您的`Joban Client Mod（JCM）`模组支持使用`JavaScript`修改其内置的`PIDS`
+1. 您可以直接从 `Releases` 中下载`ErjcmPack.zip`作为资源包
+2. 将`ErjcmPack.zip`放入`resourcepacks`文件夹中，并通过`Minecraft`游戏导入资源包
+> [!NOTE]
+> 若遇到某个`Release`没有`ErjcmPack.zip`，这时候可以直接点击`Source code (zip)`下载压缩包，提取出其中的文件夹并移动至`resourcepacks`文件夹中
+3. 使用`MTR`的`刷`右键`JCM`的`PIDS`，这通常会跳出一个界面。点击 **“选择格式”栏目** 右侧的 **“选择”按钮** ，跳转到 **“显示屏格式”** 界面，并在 **“自订显示屏格式”** 中选择需要的格式。建议对照 [核心功能](#核心功能) 选择。
 
 ## 核心功能
 > [!NOTE]
@@ -18,11 +23,21 @@
 > 2. 如有漏洞或建议，欢迎创建issue。请确保之前的issues没有报告过，并给予详细信息。
 > 3. 若有具体的代码实现，欢迎创建PR。
 
-- [x] 中国铁路站台显示屏1`assets\jsblock\scripts\cr\cr_platform_pids_1.js`
-- [ ] 中国铁路车站大屏（投影仪）`assets\jsblock\scripts\cr\station_summary_pids.js`
-- [ ] 南京地铁站台显示屏1`assets\jsblock\scripts\njmetro\njmetro_pids_1.js`
+- [x] 中国铁路站台显示屏1  
+  路径：`assets\jsblock\scripts\cr\cr_platform_pids_1.js`  
+  自订显示屏格式：`国铁站台显示屏1`
+- [ ] 中国铁路车站大屏（投影仪）  
+  路径：`assets\jsblock\scripts\cr\station_summary_pids.js`
+- [ ] 南京地铁站台显示屏1  
+  路径：`assets\jsblock\scripts\njmetro\njmetro_pids_1.js`  
+  自订显示屏格式：`南京地铁站台显示屏1`  
+> [!NOTE]
+> 请以`assets\jsblock\joban_custom_resources.json`实际注册的内容为准。
 
 ## 已知可用版本：
+> [!NOTE]
+> 1. 已知的可用版本并不意味着其他版本不可用。  
+> 2. 您可以在`Issues`中提供更多的有用信息，并等待修改 [已知可用版本](#已知可用版本) 。 ~~作者懒，不想自己去找~~
 - - Minecraft 1.20.4
   - Fabric 0.16.14
   - Optifine_I7
@@ -34,4 +49,4 @@
 
 [https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset](https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset)
 
-### 使用了~~亿点~~点DeepSeek
+### 使用了~~亿点点~~DeepSeek
