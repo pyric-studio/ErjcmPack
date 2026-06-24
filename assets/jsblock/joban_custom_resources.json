@@ -6,10 +6,10 @@
       "scriptFiles": ["jsblock:scripts/cr/cr_platform_pids_1.js"]
     },
     {
-      "id": "station_summary_pids",
+      "id": "station_summary",
       "name": "国铁车站大屏（投影仪）",
-      "scriptFiles": ["jsblock:scripts/cr/station_summary_pids.js"],
-      "background": "jsblock:texture/transparent.png"
+      "scriptFiles": ["jsblock:scripts/cr/station_summary.js"],
+      "background": "jsblock:textures/block/pids/transparent.png"
     },
     {
       "id": "njmetro_pids_1",

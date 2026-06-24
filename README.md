@@ -8,6 +8,8 @@
 
 </div>
 
+> [!WARNING]
+> **注意！JCM的文档会出现变化，本资源包可能不适用于您的JCM！** 请确保您的JCM版本在 [已知可用版本](#已知可用版本) 内！
 ## 如何使用
 > [!WARNING]
 > 请确保您的`Joban Client Mod（JCM）`模组支持使用`JavaScript`修改其内置的`PIDS`
