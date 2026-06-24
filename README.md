@@ -9,7 +9,7 @@
 </div>
 
 > [!WARNING]
-> **注意！JCM的文档会出现变化，本资源包可能不适用于您的JCM！** 请确保您的JCM版本在 [已知可用版本](#已知可用版本) 内！
+> **注意！JCM的文档会出现变化，本资源包可能不适用于您的JCM！** 
 ## 如何使用
 > [!WARNING]
 > 请确保您的`Joban Client Mod（JCM）`模组支持使用`JavaScript`修改其内置的`PIDS`
@@ -47,8 +47,9 @@
   - MTR 4.0.0prerelease.3
 
 ## 参考链接
-[https://jcm.joban.org/latest/dev/scripting/type/pids/](https://jcm.joban.org/latest/dev/scripting/type/pids/)
+最新版：[https://jcm.joban.org/latest/dev/scripting/type/pids/](https://jcm.joban.org/latest/dev/scripting/type/pids/)  
+[https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset](https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset)  
+开发参考：[https://jcm.joban.org/v2/dev/pids/](https://jcm.joban.org/v2/dev/pids/)
 
-[https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset](https://www.joban.org/wiki/JCM:Building_a_Scripted_PIDS_Preset)
 
 ### 使用了~~亿点点~~DeepSeek
